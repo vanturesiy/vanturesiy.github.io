@@ -1,0 +1,268 @@
+
+/*******************论坛抢红包 begin *****************************************/
+/*body{width:440px;height:auto; font-size:14px; position: relative;}
+table,tr,th,td,p,h1,h2,h3,h4{ padding: 0; margin: 0;  font-weight: normal;  }*/
+
+
+
+
+
+
+#ds_win_redpkt_result_content{ width: 440px; font-family: "微软雅黑" }
+
+a.icoClose{position:absolute;right:6px;top:6px; display:inline-block;width:26px;height:26px; background:url(../img/hongbao_v2018.png) -22px -141px;cursor:pointer; overflow: hidden; text-indent: -999px; z-index: 10;}
+a.icoClose:hover{ background-color: #d23337;  }
+
+#ds_win_redpkt_result_content a.black{ color: #444444; text-decoration: none; }
+#ds_win_redpkt_result_content a.black:hover{ color: #f00 }
+
+#ds_win_redpkt_result_content .redpkt_wrap{ width: 323px; margin: 0 auto;  }
+#ds_win_redpkt_result_content .redpkt_wrap .redpkt_box{ width: 100%; height: 420px; position: relative; overflow: hidden; background: #fe5357;   border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; overflow: hidden;}
+#ds_win_redpkt_result_content .redpkt_box_top{ height: 292px; background: url(../img/hongbao_v2018.png) 0 -300px; text-align: center;  padding-top: 25px;  color: #ffe5bf; }
+#ds_win_redpkt_result_content .redpkt_box_top .tx{ width:50px; height: 50px; margin: 0 auto; margin-bottom: 10px;  }
+#ds_win_redpkt_result_content .redpkt_box_top p{ font-size: 16px; line-height: 24px; margin-top: ; }
+#ds_win_redpkt_result_content .redpkt_box_top h3{ font-size:24px; line-height: 30px; font-weight:bold; width:283px; padding: 0 20px; height: 90px; display: table-cell; vertical-align: middle;  }
+#ds_win_redpkt_result_content .redpkt_box_top h3 span{ font-size: 22px; font-weight: normal; }
+#ds_win_redpkt_result_content .redpkt_box_bottom{ position: absolute; width: 100%; bottom: 15px; text-align: center; font-size: 12px; }
+#ds_win_redpkt_result_content .redpkt_box_bottom a{ color: #ffe5bf; text-decoration: none; }
+#ds_win_redpkt_result_content .redpkt_box_bottom a:hover{text-decoration: underline; }
+
+#ds_win_redpkt_result_content .redpkt_box_open{ position: absolute; height: 100px; width: 100px; background: #fdd294; left: 50%; top: 50%; margin: 10px 0 0 -50px;  text-decoration: none; }
+#ds_win_redpkt_result_content .redpkt_box_open span{ display: block; font-weight: bold; line-height: 80px; font-size: 20px; text-align: center; width: 80px; height: 80px; border: #f2c78a 4px solid;  color: #a83127; margin: 6px; }
+
+
+
+#ds_win_redpkt_result_content{ width: 440px; }
+#rpkt_result{ position: relative; }
+#ds_win_redpkt_result_content .header{position:relative;padding:0 10px;background-color:#d65645;height:76px; background: url(../img/hongbao_v2018.png);}
+#ds_win_redpkt_result_content .header .hd-left{display:none}
+#ds_win_redpkt_result_content .header .hd-center{ padding: 20px 0 6px 0; line-height: 25px; text-align: center; }
+#ds_win_redpkt_result_content .header .hd-center-creat{ background: url(../img/hongbao_v2018.png) -440px 0; text-indent: -9999px; overflow: hidden; }
+#ds_win_redpkt_result_content .header .hd-center h1{color:#fff;font-size:18px;font-weight:normal}
+#ds_win_redpkt_result_content .header .hd-center h1 b{ font-weight: normal; }
+#ds_win_redpkt_result_content .header .hd-right{position:absolute;right:13px;top:8px;width:26px;height:26px; }
+#ds_win_redpkt_result_content .header .hd-right a{display:inline-block;width:26px;height:26px; background:url(../img/hongbao_v2018.png) -22px -141px;cursor:pointer}
+#ds_win_redpkt_result_content .header .hd-right a:hover{ background-color: #d23337; border-radius: 50%; }
+
+
+#ds_win_redpkt_result_content .content{ border-left:#e64a4e 5px solid; border-right:#e64a4e 5px solid; padding-top: 95px; font-size:14px; background-color:#ffffff;min-height:100%;height:auto; position: relative;}
+#ds_win_redpkt_result_content .content .fs12{font-size:12px;line-height:1.5}
+#ds_win_redpkt_result_content .content .invisi{display:none}
+#ds_win_redpkt_result_content .content .gray{color:#ccc}
+#ds_win_redpkt_result_content .content .red{ color: #f00; }
+#ds_win_redpkt_result_content .content .org{color:#fe7200;}
+
+
+#ds_win_redpkt_result_content .rpkt-list-top{ text-align: center;  position: absolute; margin-top: 5px; width: 420px; z-index: 2; }
+#ds_win_redpkt_result_content .rpkt-list-top .rpkt-owner{ display: inline-block; width: 90px; height:90px;}
+#ds_win_redpkt_result_content .rpkt-list-top .rpkt-owner img{ width: 100%; height: 100%; }
+
+
+#ds_win_redpkt_result_content .rpkt-list-bt .bd{ max-height: 200px; overflow: auto; }
+#ds_win_redpkt_result_content .rpkt-list-bt{ width: 100%; color: #444444; padding-bottom: 50px;  }
+#ds_win_redpkt_result_content .rpkt-list-bt .hd{ height: 32px; line-height: 32px; background: #f3f3f3; padding: 0 10px; font-size: 14px;}
+#ds_win_redpkt_result_content .rpkt-list-bt li{ height: 34px; line-height: 34px; border-bottom: #f3f3f3 1px solid; padding: 0 15px; font-size: 12px; }
+#ds_win_redpkt_result_content .rpkt-list-bt li span { display: inline-block; }
+#ds_win_redpkt_result_content .rpkt-list-bt li .col1{ width: 140px; }
+#ds_win_redpkt_result_content .rpkt-list-bt li .col2{ width: ; }
+#ds_win_redpkt_result_content .rpkt-list-bt li .col3{ float: right;}
+#ds_win_redpkt_result_content .rpkt-list-bt li .col3 .best-hand{ color: #f49e2e; font-style: normal; padding:  0 10px 0 15px; background:url(../img/hongbao_v2018.png) 0 -167px no-repeat;  }
+
+
+#ds_win_redpkt_result_content .footer{height:15px; overflow:hidden; background: url(../img/hongbao_v2018.png) 0 -76px; }
+
+#ds_win_redpkt_result_content .rpkt-list-ct{ text-align: center; font-size: 14px;  color: #999;}
+#ds_win_redpkt_result_content .rpkt-list-ct .zf{ font-size: 18px; padding: 0 20px; max-height: 50px; overflow: hidden;  }
+#ds_win_redpkt_result_content .rpkt-list-ct h2{ padding: 20px 0; line-height: 70px; color: #e64a4e; }
+#ds_win_redpkt_result_content .rpkt-list-ct h2 b{ font-size: 60px; }
+#ds_win_redpkt_result_content .rpkt-list-ct .date{ }
+#ds_win_redpkt_result_content .rpkt-list-ct .op{ color: #ccc; padding: 10px 0; }
+#ds_win_redpkt_result_content .rpkt-list-ct .op a{ margin: 0 10px; }
+
+
+
+.content .type-btn{width:100%; background: url(../img/hongbao_v2018.png) 0 -100px; text-align: center;  }
+.content .type-btn p{width:114px;height:34px;line-height:34px; margin: 0 20px; display: inline-block; text-align:center;font-size:16px;cursor:pointer;position:relative; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+
+}
+
+#ds_win_redpkt {
+  font-family: 'Microsoft Yahei';
+}
+#ds_win_redpkt .not-ready{
+  padding:55px 30px 20px 210px;
+  background: url("http://static.tianyaui.com/global/dashang/2015/bbs/img/red_pkt.png?v=@TIMESTAMP@") 60px 28px no-repeat;
+  min-height: 120px;
+  *height: 120px;
+}
+#ds_win_redpkt .rpkt-over{
+  padding:35px 30px 20px 210px;
+  background: url("http://static.tianyaui.com/global/dashang/2015/bbs/img/red_pkt2.png?v=@TIMESTAMP@") 60px 28px no-repeat;
+  min-height: 120px;
+  *height: 120px;
+}
+#ds_win_redpkt .rpkt-over h3{ line-height: 30px; }
+
+#ds_win_redpkt .rpkt-tip-txt{
+  font-size: 18px;
+  color: #46465a;
+  line-height: 2;
+}
+
+#ds_win_redpkt .txt-ct{
+  text-align: center;
+  margin-top: 20px;
+}
+
+#ds_win_redpkt .txt-rt{
+  text-align: right;
+    margin-top: 30px;
+    color: #1768ba;
+    font-size: 16px;
+}
+#ds_win_redpkt .rpkt-pop-txt-input{
+   font-size: 16px;
+  width: 250px;
+  border: #ddd 1px solid;
+   height: 32px;
+   padding: 0 5px;
+}
+#ds_win_redpkt .warn-border{
+  border: 1px solid #f00;
+}
+
+#ds_win_redpkt .rpkt-pop-btn{
+  display: inline-block;
+  color: #fff;
+  background-color: #f96b0d;
+  width: 130px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius:2px;
+  font-size: 18px;
+  text-decoration: none;
+}
+#ds_win_redpkt .red{
+  color: #f00;
+}
+#ds_win_redpkt .fs14{
+  font-size: 14px;
+}
+#ds_win_redpkt .tyds_dlg_hd h2{ font-size: 18px; }
+
+
+#ds_win_redpkt_result_content .tx img{ width:100%; height: 100%;  }
+#ds_win_redpkt_result_content .br50,a.br50{  border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; overflow: hidden;   }
+#ds_win_redpkt_result_content .hide{ display: none; }
+
+
+/* 不同的ui控制 */
+.TY_ui_window .nm-hide-block,.TY_ui_window .nm-got-block, .TY_ui_window .ec-hide-block,.TY_ui_window .ec-got-block{
+  display: none;
+}
+
+
+.tyds_dlg_hd a.icoClose{
+    background-position: -50px -138px;
+}
+.tyds_dlg_hd a.icoClose:hover{
+    background-position: -20px -138px;
+}
+
+
+#ds_win_redpkt_result .tyds_dlg_hd{
+  display: none;
+}
+.TY_ui_window.noBorder .btc, .TY_ui_window.noBorder .bcl, .TY_ui_window.noBorder .bcr, .TY_ui_window.noBorder .bfc,.TY_ui_window.noBorder .btl,.TY_ui_window.noBorder .btr,.TY_ui_window.noBorder .bfl,.TY_ui_window.noBorder .bfr{ background: none; }
+
+.TY_ui_window.noBorder .bcc .ty-content{ background: none; }
+
+.tyds_dlg_wrap{ overflow: hidden; }
+
+
+
+
+
+
+
+/*
+
+
+.content .type-btn .active{background-color:#ffcc31;}
+.content .rpk-anmount{ padding: 20px 0; margin: 0 40px;   border-bottom: #eee 1px solid; line-height: 30px; }
+.content .rpk-anmount p b{ font-size: 18px; }
+.content .rpk-anmount p span{ color: #999; }
+
+.content .form-tb{margin:15px 40px;  }
+.content .form-tb th{ width: 70px; text-align: right;   }
+.content .form-tb td{ width:280px;  vertical-align:top;line-height:30px; padding: 8px 0;   }
+.content .form-tb td.mini{ padding: 0; line-height: 20px; }
+.content .form-tb .inp_wrap{ position: relative; }
+.content .form-tb .inp_wrap.hasUnit>.unit{ position: absolute; display: block; top: 50%; right: 0; line-height: 32px; position:absolute; right: 10px; color: #333; margin-top: -16px;  }
+.content .form-tb .inp_wrap.hasUnit>.unit.hide{ display: none; }
+.content .form-tb .pkt-type-tab span{display:block}
+.content .form-tb .input-txt{height:32px;line-height:32px; width: 260px; border:1px solid #ddd; padding: 0 10px 0 8px; }
+.content .form-tb .inp_wrap .input-txt{ padding-right: 30px; width: 240px; }
+.content .form-tb .wid1{width:}
+.content .form-tb .input-b{ font-size: 16px; color: #f60; font-weight: bold; }
+.content .form-tb .input-b.gray{ font-size: 14px; color: #ccc; font-weight:normal; }
+
+.content .form-tb .selectBox{}
+.content .form-tb .selectItem{ border: #ccc 1px dashed; line-height: 30px; padding: 1px 11px; margin-right: 10px; position: relative; float: left; }
+.content .form-tb .selectItem:hover{ border:#e64a4e 1px solid; cursor: pointer;  }
+.content .form-tb .selectItem.active{ border: #e64a4e 2px solid;  padding: 0px 10px; }
+.content .form-tb .selectItem.active i{ display: block; position: absolute; bottom: -4px; right: -4px; width:13px; height: 13px;background: url(../img/hongbao_v2018.png) 0 -140px;  }
+
+
+.content .form-tb .radio-txt{margin-right:12px}
+.content .form-tb .password-tip{font-size:12px}
+.content .form-tb .warn-border{border-color: #f00;}
+.content .btn-contain{text-align:center; padding: 40px 0;}
+.content .btn-contain .btn{display:inline-block; margin:0 12px;background-color:#e64a4e;border-radius:6px;height:40px;line-height:40px;font-size:16px;text-align:center;color:#fff;width:210px}
+.content .btn-contain .btn:hover{ text-decoration: none; background-color: #f26165; }
+.content .btn-contain .btn2{ background-color:#fff; color:#f26165; border: #f26165 1px solid;}
+.content .btn-contain .btn2:hover{  color: #fff; background: #f26165; }*/
+
+/*个人红包*/
+/*
+.content .personal,.content-personal .content .public{ display: none; }
+.content .public,.content-personal .content .personal{ display:table-row-group; }
+
+.content .infoBox .personal,.content-personal .content .infoBox .public{ display: none; }
+.content .infoBox .public,.content-personal .content .infoBox .personal{ display:block;}
+
+
+
+.content .infoBox{ text-align: center; padding: 0 0 20px 0; margin: 0 40px; border-bottom: #eee 1px solid; }
+.content .infoBox h3{ line-height: 40px; font-size: 24px; width: 100%; text-align:center}
+.content-personal .content .infoBox h3{ font-size: 18px; }
+.content .infoBox h1{ line-height: 70px; font-size: 40px; }
+.content .infoBox h1 span{ font-size: 18px; color: #999; }
+
+.content .unSetPwd_msg{ padding: 40px 60px  0 60px; }
+
+.doneText{  padding: 30px 0 10px 0; }
+.doneText h3{ line-height: 40px; font-size: 24px; text-align:center }
+
+
+.content .box_tip{ padding: 0 40px; line-height: 24px; color: #999; text-align: center; }
+.footer{height:15px; overflow:hidden; background: url(../img/hongbao_v2018.png) 0 -76px; }
+
+.toast{ display: none; position: absolute; padding: 10px 20px; font-size: 16px; line-height: 30px; color: #fff; background: url(../images/shade_black_50.png); z-index: 100; left: 50%; top: 50%; min-width: 240px; max-width: 320px; margin:  -20px 0 0 -130px; text-align: center;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  }*/
+/*******************论坛抢红包 end *****************************************/
+
+/*******************定向红包 start *****************************************/
+
+
+/*******************定向红包 end *****************************************/
