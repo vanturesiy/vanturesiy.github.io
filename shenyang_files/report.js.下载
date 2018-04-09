@@ -1,1 +1,0 @@
-Do(function(){$("body").delegate(".report-link","mouseenter mouseleave",function(e){var o=$(this).find(".report a:eq(0)");switch(e.type){case"mouseenter":o.show();break;case"mouseleave":o.hide()}}),$(".report-comment").bind("mouseenter mouseleave",function(e){var o=$(this).find(".report a");switch(e.type){case"mouseenter":o.show();break;case"mouseleave":o.hide()}})});
